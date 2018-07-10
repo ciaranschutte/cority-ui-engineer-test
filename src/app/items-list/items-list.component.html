@@ -1,0 +1,57 @@
+<div class='list'>
+  
+  <div class='list-header'>
+    <div class='heading'>
+      <h1>List Name</h1>
+      <div class='list-total'>Total {{items.length}}</div>
+    </div>
+
+    <div class='selected-cont'>
+      <div class='selected'>
+        {{selectedItems.length}}
+      </div>
+    </div>
+    
+    <div class='options'>
+      <div>
+        <i class="material-icons">add</i>
+      </div>
+      <div>
+        <i class="material-icons">arrow_drop_down</i>
+      </div>
+    </div>
+  
+  </div>
+
+  <ul>
+    <li class='list-item' *ngFor='let item of items' (click)="selectItem(item)">
+        <div class='selected' [ngClass]="{'active': isSelected(item)}"></div>
+
+        <div class='badge'>
+          <img src='http://via.placeholder.com/100x100'/>
+        </div>
+
+        <section>
+          <h2>{{item.name}}</h2>
+          <h3>{{item.heading}}</h3>
+          <p>{{ (item.description.length > 40) ? (item.description | slice:0:40) + '...' : (item.description)  }}</p>
+  
+          <div class='date'>
+              <i class="material-icons">event</i>
+              <div class='date-text'>{{ today | date: 'EEE MMM dd yyyy'}}
+            </div>
+          </div>
+        </section>
+  
+       
+        <div class='delete'>
+          <div class='delete-bin' (click)="deleteItem(item)">
+            <i class="material-icons">delete</i>
+          </div>
+        </div>
+      </li>
+  </ul>
+  <div class='list-footer'>
+    <a href=''>Load More</a>
+  </div>
+</div>

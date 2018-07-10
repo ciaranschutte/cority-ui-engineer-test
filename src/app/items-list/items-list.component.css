@@ -1,0 +1,203 @@
+.list {
+  border: 1px #D7D7D7 solid;
+  border-radius: 2%;
+  font-size: 1.4em;
+}
+
+.list-header, .list-footer {
+  background-color: #EBEBEB;
+  padding: 18px;
+}
+
+.list-header {
+  display: flex;
+  border-bottom: 1px #D7D7D7 solid;
+}
+
+.list-header .options {
+  display: flex;
+  margin-left: auto;
+}
+
+.list-header .options > div {
+  margin: 0 1.2em;
+  border-radius: 50%;
+  height: 2.4em;
+  width: 2.4em;
+  line-height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list-header .options i {
+  font-size: 2em;
+}
+
+.list-header .options > div:hover {
+  cursor: pointer;
+  background-color: #D7D7D7;
+}
+
+.list-header h1 {
+  font-size: 1.8em;
+  color: #555555;
+  display: inline-block;
+}
+
+.list-header .selected-cont {
+  height: 1.8em;
+}
+
+.list-header .selected {
+  background-color: #C62828;
+  color: white;
+  margin-left: 1.6em;
+  width: 1.8em;
+  height: 1.8em;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list-total {
+  font-size: 1.4em;
+  color: #777777;
+}
+
+/**
+* List Items
+*/
+
+.list li {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px #D7D7D7 solid;
+}
+
+.list li:hover {
+  cursor: pointer;
+}
+
+/*
+* Badge
+*/
+.list .badge {
+  display: none;
+}
+
+/**
+* Section
+*/
+.list-item .selected {
+  margin-right: 2em;
+  width: 10px;
+}
+
+.list-item .selected.active {
+  background-color: #0072BC;
+}
+
+.list-item section {
+  width: 32em;
+  padding-right: 3em;
+}
+
+.list h2 {
+  font-size: 1.6em;
+  font-weight: 600;
+  color: rgba(51, 51, 51);
+}
+
+.list h3 {
+  font-weight: 500;
+  color: rgba(51, 51, 51, 0.9);
+  margin: 0.2em 0;
+}
+
+.list p, .date {
+  color: rgba(131, 131, 131);
+}
+
+.list .date {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.list section, .list .badge, .list .delete {
+  margin: 1.6em 0;
+}
+
+/**
+* Delete
+*/
+
+.list .delete {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 2em;
+}
+
+.list .delete i {
+  font-size: 2em;
+  vertical-align: middle;
+  line-height: 2em;
+}
+
+.list .delete-bin {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  justify-content: center;
+  line-height: 2em;
+  height: 2.8em;
+  width: 2.8em;
+  text-align: center;
+}
+
+.list .delete-bin:hover, .list .options > div:hover {
+  box-shadow:
+    0px 2px 2px 0px #DBDBDB,
+    1px 0px 2px 0px #DBDBDB,
+    -1px 0px 2px 0px #DBDBDB;
+}
+
+
+/*
+* Load More
+*/
+.list-footer {
+  border-top: 1px #D7D7D7 solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list-footer a {
+  color: #227CBF;
+}
+
+/***
+Desktop
+****/
+@media (min-width: 600px) {
+
+  /**
+  * Badge
+  */
+  .list .badge {
+    display: flex;
+    align-items: center;
+    margin-right: 2em;
+  }
+
+  .list .badge img {
+    height: 5.5em;
+    border-radius: 50%;
+  }
+}
